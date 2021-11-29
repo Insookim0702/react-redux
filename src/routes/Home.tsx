@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { actionCreators } from "../store/reducers/ToDo";
 import ToDo from "../components/ToDo";
+import "../style/index.css";
 
 export interface RootState {
-  toDos: { text: string; id: string };
+  toDos: { text: string; id: number };
 }
 function Home({ toDos, addToDo }: any) {
   const [text, setText] = useState("");
@@ -19,8 +20,8 @@ function Home({ toDos, addToDo }: any) {
     <>
       <h1>HOME</h1>
       <form onSubmit={onSubmit}>
-        <input type="text" value={text} onChange={onChange} />
-        <button>ADD</button>
+        <input type="text" value={text} onChange={onChange} className="input" />
+        <button className="btn">ADD</button>
       </form>
       <ul>
         {toDos.map((toDo: RootState["toDos"]) => {
