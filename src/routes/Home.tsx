@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { actionCreators } from "../store/reducers/ToDo";
+// import { actionCreators } from "../store/reducers/ToDo";
+import { actionCreators } from "../store/reducers/ToDoTookit";
 import ToDo from "../components/ToDo";
 import "../style/index.css";
 
@@ -38,6 +39,6 @@ function mapStateToProps(state: any) {
 }
 
 function mapDispatchToProps(dispatch: any) {
-  return { addToDo: (text: any) => dispatch(actionCreators.addToDo(text)) };
+  return { addToDo: (text: string) => dispatch(actionCreators.addToDo(text)) };
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

@@ -1,7 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import { RootState } from "../routes/Home";
-import { actionCreators } from "../store/reducers/ToDo";
+// import { actionCreators } from "../store/reducers/ToDo";
+import { actionCreators } from "../store/reducers/ToDoTookit";
 import { Link } from "react-router-dom";
 function ToDo(toDo: any) {
   function handleDelete(e: React.MouseEvent<HTMLButtonElement>) {

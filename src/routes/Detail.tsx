@@ -1,7 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import { RootState } from "../routes/Home";
-import { actionCreators } from "../store/reducers/ToDo";
+// import { actionCreators } from "../store/reducers/ToDo";
+import { actionCreators } from "../store/reducers/ToDoTookit";
 function Detail({ toDo, deleteToDo }: any) {
   return (
     <>
